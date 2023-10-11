@@ -5,11 +5,24 @@ import (
 	"github.com/to4to/Go-Bookstore-Management/pkg/config"
 )
 
-var db  *gorm.DB
+var db *gorm.DB
+
+type Book struct {
+	gorm.Model
+
+	Name        string `gorm:""json:"name"`
+	Author      string `json:"author"`
+	Publication string `json:"publication"`
+}
 
 
-type Book struct{
+func init(){
 
 
-	
+	config.Connect()
+
+
+	db:=config.GetDB()
+
+	db.AutoMigrate(&Book{})
 }
