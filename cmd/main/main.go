@@ -8,15 +8,11 @@ import (
 	"github.com/to4to/Go-Bookstore-Management/pkg/routes"
 )
 
+func main() {
 
-func main(){
-
-
-
-
-	r:=mux.NewRouter()
+	r := mux.NewRouter()
 	routes.RegisterBookStoreRoutes(r)
-http.Handle("/", r)
-log.Fatal(http.ListenAndServe("localhost:8080",r))
+	http.Handle("/", r)
+	log.Fatal(http.ListenAndServe("localhost:8080", r))
 
 }
