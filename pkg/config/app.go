@@ -9,7 +9,6 @@ var (
 	db *gorm.DB
 )
 
-
-func Connect(){
-	d,err:=gorm.Open("mysql")
+func Connect() {//@check-up
+	d, err := gorm.Open("mysql")
 }
