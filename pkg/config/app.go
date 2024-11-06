@@ -11,4 +11,8 @@ var (
 
 func Connect() {//@check-up
 	d, err := gorm.Open("mysql")
+
+	if err!=nil{
+		panic(err)
+	}
 }
