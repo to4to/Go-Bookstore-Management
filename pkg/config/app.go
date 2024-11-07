@@ -15,4 +15,5 @@ func Connect() {//@check-up
 	if err!=nil{
 		panic(err)
 	}
+	db=d
 }
