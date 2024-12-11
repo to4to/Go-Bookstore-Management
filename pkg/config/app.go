@@ -9,11 +9,15 @@ var (
 	db *gorm.DB
 )
 
-func Connect() {//@check-up
-	d, err := gorm.Open("mysql")
+func Connect() { //@check-up
+	d, err := gorm.Open("mysql", "to4to:admin@123/bookstore?charset=utf8&parseTime=True&loc=Local")
 
-	if err!=nil{
+	if err != nil {
 		panic(err)
 	}
-	db=d
+	db = d
+}
+
+func GetDb() *gorm.DB {
+	return db
 }
