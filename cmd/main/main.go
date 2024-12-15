@@ -8,6 +8,8 @@ import (
 	"github.com/to4to/Go-Bookstore-Management/pkg/routes"
 )
 
+// main is the entry point of the application. It initializes a new router using the Gorilla Mux package,
+// registers the application routes, and starts an HTTP server listening on localhost at port 9000.
 func main() {
 
 	r := mux.NewRouter()
