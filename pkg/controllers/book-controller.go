@@ -20,7 +20,14 @@ func CreateBook(w http.ResponseWriter, r *http.Request) {
 // It extracts the book ID from the request, fetches the corresponding book
 // from the database, and writes the book details to the response.
 // If the book is not found, it returns an appropriate error message.
-func GetBook(w http.ResponseWriter, r *http.Request) {}
+func GetBook(w http.ResponseWriter, r *http.Request) {
+	newBooks := models.GetAllBooks()
+	res, _ := json.Marshal(newBooks)
+	w.Header().Set("Content-Type", "pkglication/json")
+	w.WriteHeader(http.StatusOK)
+	w.Write(res)
+
+}
 
 func GetBookById(w http.ResponseWriter, r *http.Request) {}
 
