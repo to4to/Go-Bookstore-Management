@@ -29,7 +29,9 @@ func GetBook(w http.ResponseWriter, r *http.Request) {
 
 }
 
-func GetBookById(w http.ResponseWriter, r *http.Request) {}
+func GetBookById(w http.ResponseWriter, r *http.Request) {
+	getbook:=
+}
 
 func UpdateBook(w http.ResponseWriter, r *http.Request) {}
 
