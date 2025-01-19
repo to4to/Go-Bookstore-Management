@@ -15,7 +15,7 @@ import (
 var RegisterRoutes = func(routes *mux.Router) {
 
 	routes.HandleFunc("/book", controllers.CreateBook).Methods("POST")
-	
+	routes.HandleFunc("/book", controllers.GetBook).Methods("GET")
 	
 	
 }
